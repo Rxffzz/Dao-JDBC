@@ -100,4 +100,5 @@ public class Seller implements Serializable {
                 ", department=" + department +
                 '}';
     }
+
 }
