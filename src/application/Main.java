@@ -6,6 +6,7 @@ import model.dao.DaoFactory;
 import model.dao.SellerDao;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 
@@ -30,6 +31,12 @@ public class Main {
         for (Seller obj : list) {
             System.out.println(obj);
         }
+
+        System.out.println("\n=== TEST 3: seller insert =====");
+        Seller seller1 = new Seller(null, "Rafael", "rafael@gmail.com", new Date(), 4000.0, department);
+        sellerDao.insert(seller1);
+        System.out.println("Inserted! New id = " + seller1.getId());
+
 
     }
 }
