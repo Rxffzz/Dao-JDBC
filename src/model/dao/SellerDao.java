@@ -1,7 +1,9 @@
 package model.dao;
 
+import model.Department;
 import model.Seller;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface SellerDao {
@@ -11,4 +13,5 @@ public interface SellerDao {
     void deleteById(Integer id);
     Seller findById(Integer id);
     List<Seller> findAll();
+    List<Seller> findByDepartment(Department department);
 }
